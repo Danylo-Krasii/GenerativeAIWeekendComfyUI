@@ -1,8 +1,8 @@
 {
   "id": "b1aa52ae-d4f7-4683-83d4-e513232e727d",
   "revision": 0,
-  "last_node_id": 28,
-  "last_link_id": 56,
+  "last_node_id": 29,
+  "last_link_id": 57,
   "nodes": [
     {
       "id": 8,
@@ -61,7 +61,7 @@
         50
       ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -86,9 +86,10 @@
         }
       ],
       "properties": {
-        "aux_id": "comfyui_instantid.git",
+        "cnr_id": "comfyui_instantid",
         "ver": "6c1e04bc02e003fceba38e5290a4532caee93e98",
         "Node name for S&R": "FaceKeypointsPreprocessor",
+        "aux_id": "comfyui_instantid.git",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -97,6 +98,7 @@
         "secondTabOffset": 80,
         "secondTabWidth": 65
       },
+      "widgets_values": [],
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -112,7 +114,7 @@
         170
       ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -154,7 +156,7 @@
         170
       ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -185,150 +187,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 12,
-      "type": "LoadImage",
-      "pos": [
-        -700,
-        30
-      ],
-      "size": [
-        300,
-        370
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "shape": 3,
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            48,
-            49,
-            54
-          ]
-        },
-        {
-          "name": "MASK",
-          "shape": 3,
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "1_woman.jpg",
-        "image",
-        ""
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -300,
-        30
-      ],
-      "size": [
-        400,
-        100
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            41
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "slot_index": 1,
-          "links": [
-            3,
-            5
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "slot_index": 2,
-          "links": [
-            8,
-            55
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "SDXL/arthemyComicsXL_v20.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 28,
-      "type": "VAEEncode",
-      "pos": [
-        1500,
-        30
-      ],
-      "size": [
-        210,
-        46
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 54
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 55
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            56
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "VAEEncode"
-      },
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 9,
       "type": "SaveImage",
       "pos": [
@@ -356,8 +214,7 @@
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "IPAdapter",
-        ""
+        "IPAdapter"
       ],
       "color": "#323",
       "bgcolor": "#535"
@@ -374,7 +231,7 @@
         58
       ],
       "flags": {},
-      "order": 2,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -388,148 +245,16 @@
         }
       ],
       "properties": {
-        "aux_id": "comfyui_instantid.git",
+        "cnr_id": "comfyui_instantid",
         "ver": "6c1e04bc02e003fceba38e5290a4532caee93e98",
-        "Node name for S&R": "InstantIDFaceAnalysis"
+        "Node name for S&R": "InstantIDFaceAnalysis",
+        "aux_id": "comfyui_instantid.git"
       },
       "widgets_values": [
         "CUDA"
       ],
       "color": "#223",
       "bgcolor": "#335"
-    },
-    {
-      "id": 27,
-      "type": "ControlNetLoader",
-      "pos": [
-        -300,
-        430
-      ],
-      "size": [
-        400,
-        60
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CONTROL_NET",
-          "type": "CONTROL_NET",
-          "links": [
-            51
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "ControlNetLoader"
-      },
-      "widgets_values": [
-        "diffusion_pytorch_model.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 25,
-      "type": "InstantIDModelLoader",
-      "pos": [
-        -300,
-        190
-      ],
-      "size": [
-        400,
-        58
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INSTANTID",
-          "type": "INSTANTID",
-          "links": [
-            42
-          ]
-        }
-      ],
-      "properties": {
-        "aux_id": "comfyui_instantid.git",
-        "ver": "6c1e04bc02e003fceba38e5290a4532caee93e98",
-        "Node name for S&R": "InstantIDModelLoader"
-      },
-      "widgets_values": [
-        "ip-adapter.bin"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        1500,
-        140
-      ],
-      "size": [
-        300,
-        262
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 45
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 46
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 47
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 56
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            7
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        0,
-        "fixed",
-        15,
-        3.45,
-        "dpmpp_2m",
-        "karras",
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 21,
@@ -597,9 +322,10 @@
         }
       ],
       "properties": {
-        "aux_id": "comfyui_instantid.git",
+        "cnr_id": "comfyui_instantid",
         "ver": "6c1e04bc02e003fceba38e5290a4532caee93e98",
         "Node name for S&R": "ApplyInstantIDControlNet",
+        "aux_id": "comfyui_instantid.git",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -628,7 +354,7 @@
         230
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -642,6 +368,11 @@
           "link": 43
         },
         {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
           "name": "model",
           "type": "MODEL",
           "link": 41
@@ -651,12 +382,6 @@
           "shape": 7,
           "type": "MASK",
           "link": null
-        },
-        {
-          "name": "image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 48
         },
         {
           "name": "face_embeds",
@@ -683,9 +408,10 @@
         }
       ],
       "properties": {
-        "aux_id": "comfyui_instantid.git",
+        "cnr_id": "comfyui_instantid",
         "ver": "6c1e04bc02e003fceba38e5290a4532caee93e98",
-        "Node name for S&R": "InstantIDAttentionPatch"
+        "Node name for S&R": "InstantIDAttentionPatch",
+        "aux_id": "comfyui_instantid.git"
       },
       "widgets_values": [
         1.0000000000000002,
@@ -695,6 +421,273 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -300,
+        30
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            41
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            3,
+            5
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "ZavyChromaXL.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 25,
+      "type": "InstantIDModelLoader",
+      "pos": [
+        -300,
+        190
+      ],
+      "size": [
+        400,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INSTANTID",
+          "type": "INSTANTID",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_instantid",
+        "ver": "6c1e04bc02e003fceba38e5290a4532caee93e98",
+        "Node name for S&R": "InstantIDModelLoader",
+        "aux_id": "comfyui_instantid.git"
+      },
+      "widgets_values": [
+        "ip-adapter.bin"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 27,
+      "type": "ControlNetLoader",
+      "pos": [
+        -300,
+        430
+      ],
+      "size": [
+        400,
+        60
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "diffusion_pytorch_model.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        -700,
+        30
+      ],
+      "size": [
+        300,
+        370
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            48,
+            49
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "margot robbie.jpg",
+        "image"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 29,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1100,
+        280
+      ],
+      "size": [
+        300.85498046875,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            57
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.31",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1016,
+        1016,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        1500,
+        30
+      ],
+      "size": [
+        300,
+        262
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 45
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 46
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 47
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "fixed",
+        15,
+        3.45,
+        "dpmpp_2m",
+        "karras",
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -759,7 +752,7 @@
       4,
       0,
       23,
-      2,
+      3,
       "MODEL"
     ],
     [
@@ -807,7 +800,7 @@
       12,
       0,
       23,
-      4,
+      2,
       "IMAGE"
     ],
     [
@@ -851,24 +844,8 @@
       "CONDITIONING"
     ],
     [
-      54,
-      12,
-      0,
-      28,
-      0,
-      "IMAGE"
-    ],
-    [
-      55,
-      4,
-      2,
-      28,
-      1,
-      "VAE"
-    ],
-    [
-      56,
-      28,
+      57,
+      29,
       0,
       3,
       3,
@@ -934,15 +911,16 @@
     "ds": {
       "scale": 0.7247295000000228,
       "offset": [
-        1128.3104119389527,
-        162.32857538760183
+        817.5698688132261,
+        217.0243501814781
       ]
     },
     "ue_links": [],
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true
+    "VHS_KeepIntermediate": true,
+    "frontendVersion": "1.18.6"
   },
   "version": 0.4
 }
