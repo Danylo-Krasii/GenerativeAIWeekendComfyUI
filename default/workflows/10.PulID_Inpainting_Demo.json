@@ -1,14 +1,14 @@
 {
   "id": "a54b43a9-8935-4615-bcf3-cb01da39f01e",
   "revision": 0,
-  "last_node_id": 217,
-  "last_link_id": 512,
+  "last_node_id": 222,
+  "last_link_id": 521,
   "nodes": [
     {
       "id": 151,
       "type": "SaveImage",
       "pos": [
-        4200,
+        3800,
         -70
       ],
       "size": [
@@ -16,7 +16,7 @@
         760
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -45,58 +45,18 @@
       "bgcolor": "#653"
     },
     {
-      "id": 163,
-      "type": "DifferentialDiffusion",
-      "pos": [
-        3000,
-        -70
-      ],
-      "size": [
-        300,
-        26
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 476
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            492
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "DifferentialDiffusion"
-      },
-      "widgets_values": [],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 134,
       "type": "FaceBoundingBox",
       "pos": [
         700,
-        430
+        730
       ],
       "size": [
         300,
         190
       ],
       "flags": {},
-      "order": 5,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -158,10 +118,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_faceanalysis",
+        "aux_id": "comfyui_faceanalysis.git",
         "ver": "0cd82e9621e40033ef851db95e59245d3c9a36c4",
         "Node name for S&R": "FaceBoundingBox",
-        "aux_id": "comfyui_faceanalysis.git",
+        "cnr_id": "comfyui_faceanalysis",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -179,43 +139,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 177,
-      "type": "FaceAnalysisModels",
-      "pos": [
-        700,
-        90
-      ],
-      "size": [
-        400,
-        82
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "ANALYSIS_MODELS",
-          "type": "ANALYSIS_MODELS",
-          "links": [
-            399
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_faceanalysis",
-        "ver": "0cd82e9621e40033ef851db95e59245d3c9a36c4",
-        "Node name for S&R": "FaceAnalysisModels",
-        "aux_id": "comfyui_faceanalysis.git"
-      },
-      "widgets_values": [
-        "insightface",
-        "CUDA"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 148,
       "type": "CLIPTextEncode",
       "pos": [
@@ -227,7 +150,7 @@
         150
       ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -276,7 +199,7 @@
         82
       ],
       "flags": {},
-      "order": 18,
+      "order": 20,
       "mode": 4,
       "inputs": [
         {
@@ -318,7 +241,7 @@
         186
       ],
       "flags": {},
-      "order": 19,
+      "order": 21,
       "mode": 4,
       "inputs": [
         {
@@ -378,91 +301,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 141,
-      "type": "InpaintModelConditioning",
-      "pos": [
-        2600,
-        -70
-      ],
-      "size": [
-        300,
-        138
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 484
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 485
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 309
-        },
-        {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 503
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": 504
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            493
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "slot_index": 1,
-          "links": [
-            494
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "slot_index": 2,
-          "links": [
-            495
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "InpaintModelConditioning",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        true
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 214,
       "type": "InpaintStitchImproved",
       "pos": [
@@ -510,7 +348,7 @@
       "id": 142,
       "type": "VAEDecode",
       "pos": [
-        3800,
+        3400,
         -70
       ],
       "size": [
@@ -518,7 +356,7 @@
         50
       ],
       "flags": {},
-      "order": 22,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -570,7 +408,7 @@
         730
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -641,7 +479,7 @@
         370
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -650,7 +488,8 @@
           "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            477
+            477,
+            517
           ]
         },
         {
@@ -683,7 +522,7 @@
         58
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -718,7 +557,7 @@
         88
       ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -767,7 +606,7 @@
         100
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -777,7 +616,8 @@
           "slot_index": 0,
           "links": [
             457,
-            475
+            475,
+            521
           ]
         },
         {
@@ -822,14 +662,14 @@
       "type": "SolidMask",
       "pos": [
         700,
-        680
+        980
       ],
       "size": [
         300,
         110
       ],
       "flags": {},
-      "order": 12,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -884,14 +724,14 @@
       "type": "SolidMask",
       "pos": [
         700,
-        850
+        1150
       ],
       "size": [
         300,
         110
       ],
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -946,14 +786,14 @@
       "type": "MaskComposite",
       "pos": [
         700,
-        1020
+        1320
       ],
       "size": [
         300,
         130
       ],
       "flags": {},
-      "order": 14,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -1019,14 +859,14 @@
       "type": "SimpleMath+",
       "pos": [
         700,
-        1210
+        1510
       ],
       "size": [
         300,
         98
       ],
       "flags": {},
-      "order": 11,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -1079,14 +919,14 @@
       "type": "SimpleMath+",
       "pos": [
         1100,
-        900
+        1200
       ],
       "size": [
         400,
         98
       ],
       "flags": {},
-      "order": 10,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -1233,168 +1073,222 @@
       "bgcolor": "#355"
     },
     {
-      "id": 207,
-      "type": "IPAdapterFaceID",
+      "id": 217,
+      "type": "MaskBlur+",
       "pos": [
-        2200,
-        -70
+        1100,
+        1360
       ],
       "size": [
-        300,
-        322
+        400,
+        82
       ],
       "flags": {},
-      "order": 13,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 473
-        },
-        {
-          "name": "ipadapter",
-          "type": "IPADAPTER",
-          "link": 474
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 477
-        },
-        {
-          "name": "image_negative",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "attn_mask",
-          "shape": 7,
+          "name": "mask",
           "type": "MASK",
-          "link": null
+          "link": 511
         },
         {
-          "name": "clip_vision",
-          "shape": 7,
-          "type": "CLIP_VISION",
-          "link": null
-        },
-        {
-          "name": "insightface",
-          "shape": 7,
-          "type": "INSIGHTFACE",
-          "link": null
+          "name": "amount",
+          "type": "INT",
+          "widget": {
+            "name": "amount"
+          },
+          "link": 510
         }
       ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
+          "name": "MASK",
+          "type": "MASK",
           "links": [
-            476
+            512
           ]
-        },
-        {
-          "name": "face_image",
-          "type": "IMAGE",
-          "links": null
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_ipadapter_plus",
-        "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
-        "Node name for S&R": "IPAdapterFaceID"
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "MaskBlur+"
       },
       "widgets_values": [
-        0.7500000000000001,
-        0.7500000000000001,
-        "linear",
-        "concat",
-        0.10000000000000002,
-        0.9000000000000002,
-        "V only"
+        6,
+        "cpu"
       ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
+      "color": "#233",
+      "bgcolor": "#355"
     },
     {
-      "id": 208,
-      "type": "IPAdapterUnifiedLoaderFaceID",
+      "id": 221,
+      "type": "PulidEvaClipLoader",
       "pos": [
-        1800,
-        -70
+        700,
+        350
       ],
       "size": [
-        300,
-        126
+        400,
+        30
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "EVA_CLIP",
+          "shape": 3,
+          "type": "EVA_CLIP",
+          "slot_index": 0,
+          "links": [
+            514
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "pulid_comfyui",
+        "ver": "93e0c4c226b87b23c0009d671978bad0e77289ff",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "PulidEvaClipLoader"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 222,
+      "type": "PulidInsightFaceLoader",
+      "pos": [
+        700,
+        440
+      ],
+      "size": [
+        400,
+        58
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FACEANALYSIS",
+          "shape": 3,
+          "type": "FACEANALYSIS",
+          "slot_index": 0,
+          "links": [
+            515
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "pulid_comfyui",
+        "ver": "93e0c4c226b87b23c0009d671978bad0e77289ff",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "PulidInsightFaceLoader"
+      },
+      "widgets_values": [
+        "CUDA"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 177,
+      "type": "FaceAnalysisModels",
+      "pos": [
+        700,
+        90
+      ],
+      "size": [
+        400,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "ANALYSIS_MODELS",
+          "type": "ANALYSIS_MODELS",
+          "links": [
+            399
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "comfyui_faceanalysis.git",
+        "ver": "0cd82e9621e40033ef851db95e59245d3c9a36c4",
+        "Node name for S&R": "FaceAnalysisModels",
+        "cnr_id": "comfyui_faceanalysis"
+      },
+      "widgets_values": [
+        "insightface",
+        "CUDA"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 220,
+      "type": "PulidModelLoader",
+      "pos": [
+        700,
+        230
+      ],
+      "size": [
+        400,
+        60
       ],
       "flags": {},
       "order": 7,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 475
-        },
-        {
-          "name": "ipadapter",
-          "shape": 7,
-          "type": "IPADAPTER",
-          "link": null
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
+          "name": "PULID",
+          "shape": 3,
+          "type": "PULID",
           "slot_index": 0,
           "links": [
-            473
-          ]
-        },
-        {
-          "name": "ipadapter",
-          "type": "IPADAPTER",
-          "links": [
-            474
+            513
           ]
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_ipadapter_plus",
-        "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
-        "Node name for S&R": "IPAdapterUnifiedLoaderFaceID"
+        "cnr_id": "pulid_comfyui",
+        "ver": "93e0c4c226b87b23c0009d671978bad0e77289ff",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "PulidModelLoader"
       },
       "widgets_values": [
-        "FACEID PLUS V2",
-        0.7000000000000002,
-        "CUDA"
+        "ip-adapter_pulid_sdxl_fp16.safetensors"
       ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
+      "color": "#223",
+      "bgcolor": "#335"
     },
     {
       "id": 213,
       "type": "KSampler (Efficient)",
       "pos": [
-        3400.30810546875,
-        -69.22559356689453
+        3000,
+        -70
       ],
       "size": [
         300,
         574
       ],
       "flags": {},
-      "order": 21,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 492
+          "link": 520
         },
         {
           "name": "positive",
@@ -1479,54 +1373,203 @@
       "shape": 1
     },
     {
-      "id": 217,
-      "type": "MaskBlur+",
+      "id": 163,
+      "type": "DifferentialDiffusion",
       "pos": [
-        1100,
-        1060
+        2600,
+        -70
       ],
       "size": [
-        400,
-        82
+        300,
+        26
       ],
       "flags": {},
       "order": 16,
       "mode": 0,
       "inputs": [
         {
-          "name": "mask",
-          "type": "MASK",
-          "link": 511
-        },
-        {
-          "name": "amount",
-          "type": "INT",
-          "widget": {
-            "name": "amount"
-          },
-          "link": 510
+          "name": "model",
+          "type": "MODEL",
+          "link": 519
         }
       ],
       "outputs": [
         {
-          "name": "MASK",
-          "type": "MASK",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
           "links": [
-            512
+            520
           ]
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "MaskBlur+"
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "DifferentialDiffusion"
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 141,
+      "type": "InpaintModelConditioning",
+      "pos": [
+        2200,
+        -70
+      ],
+      "size": [
+        300,
+        138
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 484
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 485
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 309
+        },
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 503
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 504
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            493
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            494
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "slot_index": 2,
+          "links": [
+            495
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "InpaintModelConditioning",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
       },
       "widgets_values": [
-        6,
-        "cpu"
+        true
       ],
-      "color": "#233",
-      "bgcolor": "#355"
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 219,
+      "type": "ApplyPulid",
+      "pos": [
+        1800,
+        -70
+      ],
+      "size": [
+        300,
+        230
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 521
+        },
+        {
+          "name": "pulid",
+          "type": "PULID",
+          "link": 513
+        },
+        {
+          "name": "eva_clip",
+          "type": "EVA_CLIP",
+          "link": 514
+        },
+        {
+          "name": "face_analysis",
+          "type": "FACEANALYSIS",
+          "link": 515
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 517
+        },
+        {
+          "name": "attn_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            518,
+            519
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "pulid_comfyui",
+        "ver": "93e0c4c226b87b23c0009d671978bad0e77289ff",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "ApplyPulid"
+      },
+      "widgets_values": [
+        "fidelity",
+        0.8,
+        0,
+        1
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -1659,46 +1702,6 @@
       "CLIP"
     ],
     [
-      473,
-      208,
-      0,
-      207,
-      0,
-      "MODEL"
-    ],
-    [
-      474,
-      208,
-      1,
-      207,
-      1,
-      "IPADAPTER"
-    ],
-    [
-      475,
-      66,
-      0,
-      208,
-      0,
-      "MODEL"
-    ],
-    [
-      476,
-      207,
-      0,
-      163,
-      0,
-      "MODEL"
-    ],
-    [
-      477,
-      84,
-      0,
-      207,
-      2,
-      "IMAGE"
-    ],
-    [
       481,
       209,
       0,
@@ -1745,14 +1748,6 @@
       210,
       3,
       "IMAGE"
-    ],
-    [
-      492,
-      163,
-      0,
-      213,
-      0,
-      "MODEL"
     ],
     [
       493,
@@ -1873,6 +1868,62 @@
       215,
       1,
       "MASK"
+    ],
+    [
+      513,
+      220,
+      0,
+      219,
+      1,
+      "PULID"
+    ],
+    [
+      514,
+      221,
+      0,
+      219,
+      2,
+      "EVA_CLIP"
+    ],
+    [
+      515,
+      222,
+      0,
+      219,
+      3,
+      "FACEANALYSIS"
+    ],
+    [
+      517,
+      84,
+      0,
+      219,
+      4,
+      "IMAGE"
+    ],
+    [
+      519,
+      219,
+      0,
+      163,
+      0,
+      "MODEL"
+    ],
+    [
+      520,
+      163,
+      0,
+      213,
+      0,
+      "MODEL"
+    ],
+    [
+      521,
+      66,
+      0,
+      219,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -1883,7 +1934,7 @@
         690,
         -140,
         420,
-        320
+        650
       ],
       "color": "#88A",
       "font_size": 24,
@@ -1895,8 +1946,8 @@
       "bounding": [
         1190,
         -140,
-        1720,
-        420
+        1320,
+        350
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -1907,7 +1958,7 @@
       "title": "Face detection",
       "bounding": [
         690,
-        360,
+        660,
         820,
         960
       ],
@@ -1919,7 +1970,7 @@
       "id": 20,
       "title": "Sampling",
       "bounding": [
-        2990,
+        2590,
         -140,
         1620,
         840
@@ -1958,10 +2009,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.45000000000001716,
+      "scale": 0.5445000000000025,
       "offset": [
-        -325.0370705696655,
-        957.2431538708375
+        119.9096530421379,
+        259.9737748946718
       ]
     },
     "node_versions": {
