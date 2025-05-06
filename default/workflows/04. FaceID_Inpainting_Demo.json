@@ -5,86 +5,6 @@
   "last_link_id": 514,
   "nodes": [
     {
-      "id": 151,
-      "type": "SaveImage",
-      "pos": [
-        4200,
-        -70
-      ],
-      "size": [
-        400,
-        760
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 501
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "SaveImage",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "inpainting_improvements/simple_inpainting/result"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 163,
-      "type": "DifferentialDiffusion",
-      "pos": [
-        3000,
-        -70
-      ],
-      "size": [
-        300,
-        26
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 476
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            492
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "DifferentialDiffusion"
-      },
-      "widgets_values": [],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 134,
       "type": "FaceBoundingBox",
       "pos": [
@@ -216,55 +136,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 148,
-      "type": "CLIPTextEncode",
-      "pos": [
-        1200,
-        50
-      ],
-      "size": [
-        500,
-        150
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 458
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            483
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "CLIPTextEncode",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "(low quality, worst quality:1.4), text, watermark, ugly, ((hands))"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 212,
       "type": "DepthAnythingPreprocessor",
       "pos": [
@@ -297,7 +168,8 @@
       "properties": {
         "cnr_id": "comfyui_controlnet_aux",
         "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
-        "Node name for S&R": "DepthAnythingPreprocessor"
+        "Node name for S&R": "DepthAnythingPreprocessor",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux"
       },
       "widgets_values": [
         "depth_anything_vitl14.pth",
@@ -500,7 +372,8 @@
       "properties": {
         "cnr_id": "comfyui-inpaint-cropandstitch",
         "ver": "f1653136f0af825f043452ac9c1274b2b2079f32",
-        "Node name for S&R": "InpaintStitchImproved"
+        "Node name for S&R": "InpaintStitchImproved",
+        "aux_id": "lquesada/ComfyUI-Inpaint-CropAndStitch"
       },
       "widgets_values": [],
       "color": "#432",
@@ -612,7 +485,8 @@
       "properties": {
         "cnr_id": "comfyui-kjnodes",
         "ver": "b3269479f2f188fd60bc1ce0c6d1740383b98857",
-        "Node name for S&R": "LoadAndResizeImage"
+        "Node name for S&R": "LoadAndResizeImage",
+        "aux_id": "kijai/ComfyUI-KJNodes"
       },
       "widgets_values": [
         "elf.png",
@@ -663,117 +537,6 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 155,
-      "type": "CLIPTextEncode",
-      "pos": [
-        1200,
-        -70
-      ],
-      "size": [
-        500,
-        88
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 459
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            482
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "CLIPTextEncode",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 66,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        700,
-        -70
-      ],
-      "size": [
-        400,
-        100
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            457,
-            475
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "slot_index": 1,
-          "links": [
-            458,
-            459
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "slot_index": 2,
-          "links": [
-            309,
-            313
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "CheckpointLoaderSimple",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "ZavyChromaXL.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 136,
@@ -1024,7 +787,8 @@
       "properties": {
         "cnr_id": "comfyui_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
-        "Node name for S&R": "SimpleMath+"
+        "Node name for S&R": "SimpleMath+",
+        "aux_id": "cubiq/ComfyUI_essentials"
       },
       "widgets_values": [
         "a*0.1"
@@ -1084,7 +848,8 @@
       "properties": {
         "cnr_id": "comfyui_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
-        "Node name for S&R": "SimpleMath+"
+        "Node name for S&R": "SimpleMath+",
+        "aux_id": "cubiq/ComfyUI_essentials"
       },
       "widgets_values": [
         "a*0.5"
@@ -1165,7 +930,8 @@
       "properties": {
         "cnr_id": "comfyui_ipadapter_plus",
         "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
-        "Node name for S&R": "IPAdapterFaceID"
+        "Node name for S&R": "IPAdapterFaceID",
+        "aux_id": "cubiq/ComfyUI_IPAdapter_plus"
       },
       "widgets_values": [
         0.7500000000000001,
@@ -1226,7 +992,8 @@
       "properties": {
         "cnr_id": "comfyui_ipadapter_plus",
         "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
-        "Node name for S&R": "IPAdapterUnifiedLoaderFaceID"
+        "Node name for S&R": "IPAdapterUnifiedLoaderFaceID",
+        "aux_id": "cubiq/ComfyUI_IPAdapter_plus"
       },
       "widgets_values": [
         "FACEID PLUS V2",
@@ -1235,108 +1002,6 @@
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 213,
-      "type": "KSampler (Efficient)",
-      "pos": [
-        3400.30810546875,
-        -69.22559356689453
-      ],
-      "size": [
-        300,
-        574
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 492
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 493
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 494
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 495
-        },
-        {
-          "name": "optional_vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "script",
-          "shape": 7,
-          "type": "SCRIPT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": null
-        },
-        {
-          "name": "CONDITIONING+",
-          "type": "CONDITIONING",
-          "links": null
-        },
-        {
-          "name": "CONDITIONING-",
-          "type": "CONDITIONING",
-          "links": null
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            496
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": null
-        },
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "efficiency-nodes-comfyui",
-        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
-        "Node name for S&R": "KSampler (Efficient)"
-      },
-      "widgets_values": [
-        42,
-        null,
-        12,
-        3.5,
-        "dpmpp_2m",
-        "karras",
-        0.7000000000000002,
-        "latent2rgb",
-        "true"
-      ],
-      "color": "#432",
-      "bgcolor": "#653",
-      "shape": 1
     },
     {
       "id": 217,
@@ -1379,7 +1044,8 @@
       "properties": {
         "cnr_id": "comfyui_essentials",
         "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "MaskBlur+"
+        "Node name for S&R": "MaskBlur+",
+        "aux_id": "cubiq/ComfyUI_essentials"
       },
       "widgets_values": [
         6,
@@ -1426,7 +1092,8 @@
       "properties": {
         "cnr_id": "comfyui-kjnodes",
         "ver": "b7e5b6f1e2b7c79b3f1e4b4bfe5e1687715803ab",
-        "Node name for S&R": "ImageAndMaskPreview"
+        "Node name for S&R": "ImageAndMaskPreview",
+        "aux_id": "kijai/ComfyUI-KJNodes"
       },
       "widgets_values": [
         1,
@@ -1448,7 +1115,7 @@
         370
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1548,7 +1215,8 @@
       "properties": {
         "cnr_id": "comfyui-inpaint-cropandstitch",
         "ver": "f1653136f0af825f043452ac9c1274b2b2079f32",
-        "Node name for S&R": "InpaintCropImproved"
+        "Node name for S&R": "InpaintCropImproved",
+        "aux_id": "lquesada/ComfyUI-Inpaint-CropAndStitch"
       },
       "widgets_values": [
         "bicubic",
@@ -1577,6 +1245,349 @@
       ],
       "color": "#233",
       "bgcolor": "#355"
+    },
+    {
+      "id": 148,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1200,
+        180
+      ],
+      "size": [
+        500,
+        88
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 458
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            483
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "(low quality, worst quality:1.4), text, watermark, ugly, ((hands))"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 155,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1200,
+        -70
+      ],
+      "size": [
+        500,
+        210
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 459
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            482
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "(A 2d european comicbook illustration with clearly recognizable lineart of a pale elven princess laughing and showing her teeth in a full zoom close-up. She's a young woman with an playful expression portrayed with a black velvet dress in front of an evil portal that is glowing with a strong light in the middle of a wild jungle temple. she has two elegant antlers coming from her head. The scene is dramatic and with complex lighting that highlight the main character making her stand out in her joyful expression in the middle of the chaotic scene. The background slowly fades from a focused and sharp illustration on the subject to more undefined shapes until it blurs into a simple background that surround the whole artwork, atmospheric fog depth. The whole drawing is made with green and orange tones with flat colors and high coherence and continuity between shapes.)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 66,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        700,
+        -70
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            457,
+            475
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            458,
+            459
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            309,
+            313
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "ArthemyComics.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 163,
+      "type": "DifferentialDiffusion",
+      "pos": [
+        3000,
+        -70
+      ],
+      "size": [
+        300,
+        26
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 476
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            492
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "DifferentialDiffusion"
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 151,
+      "type": "SaveImage",
+      "pos": [
+        4200,
+        -70
+      ],
+      "size": [
+        400,
+        760
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 501
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "SaveImage",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "FaceID_Inpainting_Demo"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 213,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        3400.30810546875,
+        -69.22559356689453
+      ],
+      "size": [
+        300,
+        574
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 492
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 493
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 494
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 495
+        },
+        {
+          "name": "optional_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "script",
+          "shape": 7,
+          "type": "SCRIPT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            496
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-comfyui",
+        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
+        "Node name for S&R": "KSampler (Efficient)",
+        "aux_id": "jags111/efficiency-nodes-comfyui"
+      },
+      "widgets_values": [
+        -1,
+        null,
+        12,
+        3.5,
+        "dpmpp_2m",
+        "karras",
+        0.7000000000000002,
+        "latent2rgb",
+        "true"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
     }
   ],
   "links": [
@@ -2026,8 +2037,8 @@
     "ds": {
       "scale": 0.45000000000001716,
       "offset": [
-        -325.0370705696655,
-        957.2431538708375
+        -506.1537740829989,
+        191.17273320823182
       ]
     },
     "node_versions": {

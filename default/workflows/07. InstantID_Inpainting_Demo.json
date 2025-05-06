@@ -1,8 +1,8 @@
 {
   "id": "a54b43a9-8935-4615-bcf3-cb01da39f01e",
   "revision": 0,
-  "last_node_id": 208,
-  "last_link_id": 482,
+  "last_node_id": 210,
+  "last_link_id": 489,
   "nodes": [
     {
       "id": 136,
@@ -16,7 +16,7 @@
         110
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -65,46 +65,6 @@
       ],
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 151,
-      "type": "SaveImage",
-      "pos": [
-        4200,
-        -70
-      ],
-      "size": [
-        400,
-        760
-      ],
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 474
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "SaveImage",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "inpainting_improvements/simple_inpainting/result"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 133,
@@ -164,7 +124,7 @@
         26
       ],
       "flags": {},
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -179,7 +139,7 @@
           "type": "MODEL",
           "slot_index": 0,
           "links": [
-            461
+            485
           ]
         }
       ],
@@ -204,7 +164,7 @@
         206
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -343,7 +303,7 @@
         230
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -422,7 +382,7 @@
         110
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -473,117 +433,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 205,
-      "type": "KSampler",
-      "pos": [
-        3400,
-        -70
-      ],
-      "size": [
-        315,
-        262
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 461
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 462
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 463
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 464
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            465
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        42,
-        "fixed",
-        10,
-        3.5,
-        "dpmpp_2m_sde",
-        "karras",
-        0.7000000000000002
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 148,
-      "type": "CLIPTextEncode",
-      "pos": [
-        1200,
-        50
-      ],
-      "size": [
-        500,
-        150
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 458
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            296
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "CLIPTextEncode",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "(low quality, worst quality:1.4), text, watermark, ugly, ((hands))"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 134,
       "type": "FaceBoundingBox",
       "pos": [
@@ -595,7 +444,7 @@
         190
       ],
       "flags": {},
-      "order": 7,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -677,43 +526,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 177,
-      "type": "FaceAnalysisModels",
-      "pos": [
-        700,
-        450
-      ],
-      "size": [
-        400,
-        82
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "ANALYSIS_MODELS",
-          "type": "ANALYSIS_MODELS",
-          "links": [
-            399
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_faceanalysis",
-        "ver": "0cd82e9621e40033ef851db95e59245d3c9a36c4",
-        "Node name for S&R": "FaceAnalysisModels",
-        "aux_id": "comfyui_faceanalysis.git"
-      },
-      "widgets_values": [
-        "insightface",
-        "CUDA"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 141,
       "type": "InpaintModelConditioning",
       "pos": [
@@ -725,7 +537,7 @@
         138
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -760,7 +572,7 @@
           "type": "CONDITIONING",
           "slot_index": 0,
           "links": [
-            462
+            486
           ]
         },
         {
@@ -768,7 +580,7 @@
           "type": "CONDITIONING",
           "slot_index": 1,
           "links": [
-            463
+            487
           ]
         },
         {
@@ -776,7 +588,7 @@
           "type": "LATENT",
           "slot_index": 2,
           "links": [
-            464
+            488
           ]
         }
       ],
@@ -810,7 +622,7 @@
         60
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -853,7 +665,7 @@
         58
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -897,7 +709,7 @@
         370
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -939,7 +751,7 @@
         730
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1010,7 +822,7 @@
         46
       ],
       "flags": {},
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1054,13 +866,13 @@
         50
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 465
+          "link": 489
         },
         {
           "name": "vae",
@@ -1106,7 +918,7 @@
         98
       ],
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -1228,65 +1040,53 @@
       "bgcolor": "#355"
     },
     {
-      "id": 66,
-      "type": "CheckpointLoaderSimple",
+      "id": 209,
+      "type": "ImageAndMaskPreview",
       "pos": [
-        700,
-        -70
+        1100,
+        1100
       ],
       "size": [
         400,
-        100
+        410
       ],
       "flags": {},
-      "order": 6,
+      "order": 18,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 483
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 484
+        }
+      ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            457
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "slot_index": 1,
-          "links": [
-            458,
-            459
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "slot_index": 2,
-          "links": [
-            309,
-            313
-          ]
+          "name": "composite",
+          "type": "IMAGE",
+          "links": null
         }
       ],
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "CheckpointLoaderSimple",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "b7e5b6f1e2b7c79b3f1e4b4bfe5e1687715803ab",
+        "Node name for S&R": "ImageAndMaskPreview",
+        "aux_id": "kijai/ComfyUI-KJNodes"
       },
       "widgets_values": [
-        "ZavyChromaXL.safetensors"
+        1,
+        "255, 255, 255",
+        false
       ],
-      "color": "#223",
-      "bgcolor": "#335"
+      "color": "#233",
+      "bgcolor": "#355"
     },
     {
       "id": 208,
@@ -1342,14 +1142,16 @@
           "type": "IMAGE",
           "links": [
             475,
-            476
+            476,
+            483
           ]
         },
         {
           "name": "cropped_mask",
           "type": "MASK",
           "links": [
-            477
+            477,
+            484
           ]
         }
       ],
@@ -1387,6 +1189,116 @@
       "bgcolor": "#355"
     },
     {
+      "id": 66,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        700,
+        -70
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            457
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            458,
+            459
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            309,
+            313
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "ArthemyComics.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 148,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1200,
+        180
+      ],
+      "size": [
+        500,
+        88
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 458
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            296
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "(low quality, worst quality:1.4), text, watermark, ugly, ((hands))"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
       "id": 155,
       "type": "CLIPTextEncode",
       "pos": [
@@ -1395,10 +1307,10 @@
       ],
       "size": [
         500,
-        88
+        210
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -1430,10 +1342,190 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "cartoon, flat color, 2d"
+        "(A 2d european comicbook illustration with clearly recognizable lineart of a pale elven princess laughing and showing her teeth in a full zoom close-up. She's a young woman with an playful expression portrayed with a black velvet dress in front of an evil portal that is glowing with a strong light in the middle of a wild jungle temple. she has two elegant antlers coming from her head. The scene is dramatic and with complex lighting that highlight the main character making her stand out in her joyful expression in the middle of the chaotic scene. The background slowly fades from a focused and sharp illustration on the subject to more undefined shapes until it blurs into a simple background that surround the whole artwork, atmospheric fog depth. The whole drawing is made with green and orange tones with flat colors and high coherence and continuity between shapes.)"
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 151,
+      "type": "SaveImage",
+      "pos": [
+        4200,
+        -70
+      ],
+      "size": [
+        400,
+        760
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 474
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "SaveImage",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "InstantID_Inpainting"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 177,
+      "type": "FaceAnalysisModels",
+      "pos": [
+        700,
+        450
+      ],
+      "size": [
+        400,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "ANALYSIS_MODELS",
+          "type": "ANALYSIS_MODELS",
+          "links": [
+            399
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_faceanalysis",
+        "ver": "0cd82e9621e40033ef851db95e59245d3c9a36c4",
+        "Node name for S&R": "FaceAnalysisModels",
+        "aux_id": "comfyui_faceanalysis.git"
+      },
+      "widgets_values": [
+        "insightface",
+        "CUDA"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 210,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        3400,
+        -70
+      ],
+      "size": [
+        300,
+        574
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 485
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 486
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 487
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 488
+        },
+        {
+          "name": "optional_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "script",
+          "shape": 7,
+          "type": "SCRIPT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            489
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-comfyui",
+        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
+        "Node name for S&R": "KSampler (Efficient)",
+        "aux_id": "jags111/efficiency-nodes-comfyui"
+      },
+      "widgets_values": [
+        -1,
+        null,
+        10,
+        3,
+        "dpmpp_2m",
+        "karras",
+        0.7000000000000002,
+        "latent2rgb",
+        "true"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
     }
   ],
   "links": [
@@ -1662,46 +1754,6 @@
       "CLIP"
     ],
     [
-      461,
-      163,
-      0,
-      205,
-      0,
-      "MODEL"
-    ],
-    [
-      462,
-      141,
-      0,
-      205,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      463,
-      141,
-      1,
-      205,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      464,
-      141,
-      2,
-      205,
-      3,
-      "LATENT"
-    ],
-    [
-      465,
-      205,
-      0,
-      142,
-      0,
-      "LATENT"
-    ],
-    [
       473,
       142,
       0,
@@ -1772,6 +1824,62 @@
       207,
       0,
       "STITCHER"
+    ],
+    [
+      483,
+      208,
+      1,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      484,
+      208,
+      2,
+      209,
+      1,
+      "MASK"
+    ],
+    [
+      485,
+      163,
+      0,
+      210,
+      0,
+      "MODEL"
+    ],
+    [
+      486,
+      141,
+      0,
+      210,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      487,
+      141,
+      1,
+      210,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      488,
+      141,
+      2,
+      210,
+      3,
+      "LATENT"
+    ],
+    [
+      489,
+      210,
+      3,
+      142,
+      0,
+      "LATENT"
     ]
   ],
   "groups": [
@@ -1867,7 +1975,7 @@
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
-    "frontendVersion": "1.18.6"
+    "frontendVersion": "1.18.9"
   },
   "version": 0.4
 }

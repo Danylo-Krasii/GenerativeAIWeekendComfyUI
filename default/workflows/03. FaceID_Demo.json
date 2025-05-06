@@ -50,39 +50,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 9,
-      "type": "SaveImage",
-      "pos": [
-        1500,
-        110
-      ],
-      "size": [
-        529.7760009765625,
-        582.3048095703125
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 9
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "SaveImage"
-      },
-      "widgets_values": [
-        "IPAdapter"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 5,
       "type": "EmptyLatentImage",
       "pos": [
@@ -121,88 +88,150 @@
       "bgcolor": "#535"
     },
     {
-      "id": 6,
-      "type": "CLIPTextEncode",
+      "id": 20,
+      "type": "IPAdapterUnifiedLoaderFaceID",
       "pos": [
-        200,
+        -300,
+        190
+      ],
+      "size": [
+        400,
+        126
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 36
+        },
+        {
+          "name": "ipadapter",
+          "shape": 7,
+          "type": "IPADAPTER",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_ipadapter_plus",
+        "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
+        "Node name for S&R": "IPAdapterUnifiedLoaderFaceID",
+        "aux_id": "cubiq/ComfyUI_IPAdapter_plus"
+      },
+      "widgets_values": [
+        "FACEID PLUS V2",
+        0.8000000000000002,
+        "CUDA"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 18,
+      "type": "IPAdapterFaceID",
+      "pos": [
+        700,
         30
       ],
       "size": [
-        400,
-        170
+        300,
+        322
       ],
       "flags": {},
-      "order": 4,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 3
+          "name": "model",
+          "type": "MODEL",
+          "link": 35
+        },
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 34
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 29
+        },
+        {
+          "name": "image_negative",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "attn_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "clip_vision",
+          "shape": 7,
+          "type": "CLIP_VISION",
+          "link": null
+        },
+        {
+          "name": "insightface",
+          "shape": 7,
+          "type": "INSIGHTFACE",
+          "link": null
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "MODEL",
+          "type": "MODEL",
           "slot_index": 0,
           "links": [
-            38
+            37
           ]
+        },
+        {
+          "name": "face_image",
+          "type": "IMAGE",
+          "links": null
         }
       ],
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CLIPTextEncode"
+        "cnr_id": "comfyui_ipadapter_plus",
+        "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
+        "Node name for S&R": "IPAdapterFaceID",
+        "aux_id": "cubiq/ComfyUI_IPAdapter_plus"
       },
       "widgets_values": [
-        "closeup of a beautiful woman wearing a black dress on the seaside\n\nserene, sunset, spring, high quality, detailed, diffuse light"
+        0.9500000000000002,
+        0.9500000000000002,
+        "linear",
+        "concat",
+        0,
+        1,
+        "V only"
       ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 7,
-      "type": "CLIPTextEncode",
-      "pos": [
-        200,
-        260
-      ],
-      "size": [
-        400,
-        170
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 5
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            39
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "blurry, noisy, messy, lowres, jpeg, artifacts, ill, distorted, malformed, naked"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
+      "color": "#323",
+      "bgcolor": "#535"
     },
     {
       "id": 4,
@@ -252,10 +281,127 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "ZavyChromaXL.safetensors"
+        "ArthemyComics.safetensors"
       ],
       "color": "#223",
       "bgcolor": "#335"
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        200,
+        30
+      ],
+      "size": [
+        400,
+        340
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(A 2d european comicbook illustration with clearly recognizable lineart of a pale elven princess laughing and showing her teeth in a full zoom close-up. She's a young woman with an playful expression portrayed with a black velvet dress in front of an evil portal that is glowing with a strong light in the middle of a wild jungle temple. she has two elegant antlers coming from her head. The scene is dramatic and with complex lighting that highlight the main character making her stand out in her joyful expression in the middle of the chaotic scene. The background slowly fades from a focused and sharp illustration on the subject to more undefined shapes until it blurs into a simple background that surround the whole artwork, atmospheric fog depth. The whole drawing is made with green and orange tones with flat colors and high coherence and continuity between shapes.)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        1500,
+        110
+      ],
+      "size": [
+        529.7760009765625,
+        582.3048095703125
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "FaceID_Demo"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        200,
+        410
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "((nude)), (low quality, worst quality:1.4), text, watermark, ugly"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
     },
     {
       "id": 12,
@@ -293,7 +439,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "amy.png",
+        "margot robbie.jpg",
         "image"
       ],
       "color": "#322",
@@ -384,10 +530,11 @@
       "properties": {
         "cnr_id": "efficiency-nodes-comfyui",
         "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
-        "Node name for S&R": "KSampler (Efficient)"
+        "Node name for S&R": "KSampler (Efficient)",
+        "aux_id": "jags111/efficiency-nodes-comfyui"
       },
       "widgets_values": [
-        42,
+        -1,
         null,
         20,
         3.5,
@@ -400,150 +547,6 @@
       "color": "#323",
       "bgcolor": "#535",
       "shape": 1
-    },
-    {
-      "id": 20,
-      "type": "IPAdapterUnifiedLoaderFaceID",
-      "pos": [
-        -300,
-        190
-      ],
-      "size": [
-        400,
-        126
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 36
-        },
-        {
-          "name": "ipadapter",
-          "shape": 7,
-          "type": "IPADAPTER",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            35
-          ]
-        },
-        {
-          "name": "ipadapter",
-          "type": "IPADAPTER",
-          "links": [
-            34
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_ipadapter_plus",
-        "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
-        "Node name for S&R": "IPAdapterUnifiedLoaderFaceID"
-      },
-      "widgets_values": [
-        "FACEID PLUS V2",
-        0.8000000000000002,
-        "CUDA"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 18,
-      "type": "IPAdapterFaceID",
-      "pos": [
-        700,
-        30
-      ],
-      "size": [
-        300,
-        322
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 35
-        },
-        {
-          "name": "ipadapter",
-          "type": "IPADAPTER",
-          "link": 34
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 29
-        },
-        {
-          "name": "image_negative",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "attn_mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": null
-        },
-        {
-          "name": "clip_vision",
-          "shape": 7,
-          "type": "CLIP_VISION",
-          "link": null
-        },
-        {
-          "name": "insightface",
-          "shape": 7,
-          "type": "INSIGHTFACE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            37
-          ]
-        },
-        {
-          "name": "face_image",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_ipadapter_plus",
-        "ver": "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
-        "Node name for S&R": "IPAdapterFaceID"
-      },
-      "widgets_values": [
-        0.9500000000000002,
-        0.9500000000000002,
-        "linear",
-        "concat",
-        0,
-        1,
-        "V only"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -686,7 +689,7 @@
         190,
         -40,
         420,
-        483.6000061035156
+        560
       ],
       "color": "#b58b2a",
       "font_size": 24,
@@ -711,11 +714,11 @@
     "ds": {
       "scale": 1.1671841070450073,
       "offset": [
-        770.6145562905724,
-        455.65395697838215
+        806.9910004391586,
+        357.16162146257767
       ]
     },
-    "frontendVersion": "1.18.6",
+    "frontendVersion": "1.18.9",
     "ue_links": [],
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,

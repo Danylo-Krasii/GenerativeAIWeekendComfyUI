@@ -57,95 +57,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 148,
-      "type": "CLIPTextEncode",
-      "pos": [
-        1200,
-        120
-      ],
-      "size": [
-        500,
-        150
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 524
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            483
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "CLIPTextEncode",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "(low quality, worst quality:1.4), text, watermark, ugly, ((hands))"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 151,
-      "type": "SaveImage",
-      "pos": [
-        2800,
-        -70
-      ],
-      "size": [
-        400,
-        470
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 522
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "SaveImage",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "inpainting_improvements/simple_inpainting/result"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 84,
       "type": "LoadImage",
       "pos": [
@@ -228,7 +139,8 @@
       "properties": {
         "cnr_id": "ComfyMath",
         "ver": "c01177221c31b8e5fbc062778fc8254aeb541638",
-        "Node name for S&R": "CM_NearestSDXLResolution"
+        "Node name for S&R": "CM_NearestSDXLResolution",
+        "aux_id": "evanspearman/ComfyMath"
       },
       "widgets_values": [],
       "color": "#332922",
@@ -375,6 +287,121 @@
       "bgcolor": "#3f5159"
     },
     {
+      "id": 225,
+      "type": "PreviewImage",
+      "pos": [
+        1200,
+        630
+      ],
+      "size": [
+        300,
+        410
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 538
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 212,
+      "type": "DepthAnythingPreprocessor",
+      "pos": [
+        1200,
+        500
+      ],
+      "size": [
+        300,
+        82
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 537
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            491,
+            538
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
+        "Node name for S&R": "DepthAnythingPreprocessor",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux"
+      },
+      "widgets_values": [
+        "depth_anything_vitl14.pth",
+        1024
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 151,
+      "type": "SaveImage",
+      "pos": [
+        2800,
+        -70
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 522
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "SaveImage",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "ControlNet_Demo"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 66,
       "type": "CheckpointLoaderSimple",
       "pos": [
@@ -430,7 +457,7 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "ZavyChromaXL.safetensors"
+        "ArthemyComics.safetensors"
       ],
       "color": "#223",
       "bgcolor": "#335"
@@ -448,7 +475,7 @@
       ],
       "flags": {},
       "order": 4,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "model",
@@ -501,7 +528,7 @@
       ],
       "size": [
         500,
-        130
+        210
       ],
       "flags": {},
       "order": 7,
@@ -536,7 +563,127 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "cartoon, cyberpunk, neon"
+        "(A 2d european comicbook illustration with clearly recognizable lineart of a pale elven princess laughing and showing her teeth in a full zoom close-up. She's a young woman with an playful expression portrayed with a black velvet dress in front of an evil portal that is glowing with a strong light in the middle of a wild jungle temple. she has two elegant antlers coming from her head. The scene is dramatic and with complex lighting that highlight the main character making her stand out in her joyful expression in the middle of the chaotic scene. The background slowly fades from a focused and sharp illustration on the subject to more undefined shapes until it blurs into a simple background that surround the whole artwork, atmospheric fog depth. The whole drawing is made with green and orange tones with flat colors and high coherence and continuity between shapes.)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 148,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1200,
+        180
+      ],
+      "size": [
+        500,
+        90
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 524
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            483
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "((nude)), (low quality, worst quality:1.4), text, watermark, ugly"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 210,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        1600,
+        500
+      ],
+      "size": [
+        300,
+        186
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 482
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 483
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 481
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 491
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            518
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            519
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        0.5000000000000001,
+        0,
+        0.9000000000000002
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -626,13 +773,14 @@
       "properties": {
         "cnr_id": "efficiency-nodes-comfyui",
         "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
-        "Node name for S&R": "KSampler (Efficient)"
+        "Node name for S&R": "KSampler (Efficient)",
+        "aux_id": "jags111/efficiency-nodes-comfyui"
       },
       "widgets_values": [
-        42,
+        -1,
         null,
         15,
-        3.5,
+        4.5,
         "dpmpp_2m",
         "karras",
         0.7000000000000002,
@@ -642,151 +790,6 @@
       "color": "#432",
       "bgcolor": "#653",
       "shape": 1
-    },
-    {
-      "id": 225,
-      "type": "PreviewImage",
-      "pos": [
-        1200,
-        630
-      ],
-      "size": [
-        300,
-        410
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 538
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": [],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 212,
-      "type": "DepthAnythingPreprocessor",
-      "pos": [
-        1200,
-        500
-      ],
-      "size": [
-        300,
-        82
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 537
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            491,
-            538
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_controlnet_aux",
-        "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
-        "Node name for S&R": "DepthAnythingPreprocessor"
-      },
-      "widgets_values": [
-        "depth_anything_vitl14.pth",
-        1024
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 210,
-      "type": "ControlNetApplyAdvanced",
-      "pos": [
-        1600,
-        500
-      ],
-      "size": [
-        300,
-        186
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 482
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 483
-        },
-        {
-          "name": "control_net",
-          "type": "CONTROL_NET",
-          "link": 481
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 491
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            518
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            519
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "ControlNetApplyAdvanced"
-      },
-      "widgets_values": [
-        1.0000000000000002,
-        0,
-        0.9000000000000002
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     }
   ],
   "links": [

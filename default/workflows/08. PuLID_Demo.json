@@ -1,40 +1,9 @@
 {
   "id": "b903cc07-2255-49fc-8ad4-aa345595d50c",
   "revision": 0,
-  "last_node_id": 46,
-  "last_link_id": 138,
+  "last_node_id": 47,
+  "last_link_id": 139,
   "nodes": [
-    {
-      "id": 10,
-      "type": "PreviewImage",
-      "pos": [
-        1500,
-        -290
-      ],
-      "size": [
-        400,
-        390
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 10
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": [],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
     {
       "id": 19,
       "type": "PulidEvaClipLoader",
@@ -106,51 +75,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1500,
-        -370
-      ],
-      "size": [
-        300,
-        50
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 138
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 8
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            10
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": [],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 17,
@@ -225,143 +149,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 23,
-      "type": "CLIPTextEncode",
-      "pos": [
-        200,
-        -140
-      ],
-      "size": [
-        400,
-        170
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 94
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            136
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "blurry, malformed, low quality, worst quality, artifacts, noise, text, watermark, glitch, deformed, ugly, horror, ill"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -300,
-        -370
-      ],
-      "size": [
-        400,
-        100
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            133
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "slot_index": 1,
-          "links": [
-            93,
-            94
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "slot_index": 2,
-          "links": [
-            8
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "ZavyChromaXL.safetensors"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 12,
-      "type": "LoadImage",
-      "pos": [
-        -800,
-        -370
-      ],
-      "size": [
-        400,
-        470
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            114
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "amy.png",
-        "image"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 33,
       "type": "ApplyPulid",
       "pos": [
@@ -431,6 +218,143 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -300,
+        -370
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            133
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            93,
+            94
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "ArthemyComics.safetensors"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 22,
+      "type": "CLIPTextEncode",
+      "pos": [
+        200,
+        -370
+      ],
+      "size": [
+        400,
+        260
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            135
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(A 2d european comicbook illustration with clearly recognizable lineart of a pale elven princess laughing and showing her teeth in a full zoom close-up. She's a young woman with an playful expression portrayed with a black velvet dress in front of an evil portal that is glowing with a strong light in the middle of a wild jungle temple. she has two elegant antlers coming from her head. The scene is dramatic and with complex lighting that highlight the main character making her stand out in her joyful expression in the middle of the chaotic scene. The background slowly fades from a focused and sharp illustration on the subject to more undefined shapes until it blurs into a simple background that surround the whole artwork, atmospheric fog depth. The whole drawing is made with green and orange tones with flat colors and high coherence and continuity between shapes.)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 23,
+      "type": "CLIPTextEncode",
+      "pos": [
+        200,
+        -70
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            136
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(low quality, worst quality:1.4), text, watermark, ugly, ((hands))"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
     },
     {
       "id": 46,
@@ -520,7 +444,7 @@
         "Node name for S&R": "KSampler (Efficient)"
       },
       "widgets_values": [
-        42,
+        442090819986496,
         null,
         20,
         3.5,
@@ -535,46 +459,123 @@
       "shape": 1
     },
     {
-      "id": 22,
-      "type": "CLIPTextEncode",
+      "id": 8,
+      "type": "VAEDecode",
       "pos": [
-        200,
+        1500,
         -370
       ],
       "size": [
-        400,
-        170
+        300,
+        50
       ],
       "flags": {},
-      "order": 6,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 93
+          "name": "samples",
+          "type": "LATENT",
+          "link": 138
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            135
+            139
           ]
         }
       ],
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.28",
-        "Node name for S&R": "CLIPTextEncode"
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 47,
+      "type": "SaveImage",
+      "pos": [
+        1500,
+        -280
+      ],
+      "size": [
+        300,
+        420
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 139
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32"
       },
       "widgets_values": [
-        "closeup portrait, cyberpunk, cinematic, hoodie, purple hair, highly detailed, 4k, high resolution"
+        "PulID_Demo"
       ],
-      "color": "#232",
-      "bgcolor": "#353"
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        -800,
+        -370
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            114
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "margot robbie.jpg",
+        "image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -585,14 +586,6 @@
       8,
       1,
       "VAE"
-    ],
-    [
-      10,
-      8,
-      0,
-      10,
-      0,
-      "IMAGE"
     ],
     [
       81,
@@ -689,6 +682,14 @@
       8,
       0,
       "LATENT"
+    ],
+    [
+      139,
+      8,
+      0,
+      47,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -724,7 +725,7 @@
       "bounding": [
         1090,
         -440,
-        820,
+        720,
         700
       ],
       "color": "#88A",
@@ -750,8 +751,8 @@
     "ds": {
       "scale": 0.8769226950000101,
       "offset": [
-        1009.0967437956045,
-        706.8687983194424
+        1166.178092910418,
+        649.5731485106653
       ]
     },
     "frontendVersion": "1.18.9",
